@@ -1,0 +1,109 @@
+{% block page_title %}Home{% endblock %}
+{% extends 'layout/auth_base.twig' %}
+{% block title %}Club Cultural{% endblock %}
+
+{% block content %}
+    <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+        <section id="page" class="container mTop-30 mBtm-50">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel-body frameLR bg-white shadow space-sm">
+                        <form method="POST" action="signup">
+                            {{ csrf_field() }}
+                            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                                <h3 class="dark-grey text-center">
+                                    Registrate
+                                </h3>
+
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6">
+                                        <a href="/redirect/facebook" class="btn btn-primary btn-raised btn-block ripple-effect" style="background-color: #3b5998">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i> FACEBOOK
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <a href="/redirect/twitter" class="btn btn-primary btn-raised btn-block ripple-effect" style="background-color: #1da1f2">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i> TWITTER
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <br>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div style="text-align: center"><h5>O REGISTRATE CON</h5></div>
+                                    </div>
+                                </div>
+
+                                {#<div class="form-group {{ errors.has('user_type') ? ' has-error' : '' }}">
+                                    <label>Te registras como...</label>
+                                    <select name="role" class="form-control sm-margin-bottom-10">
+                                        <option value="member">Miembro Suscriptor</option>
+                                        <option value="business">Negocio (Restaurant, Academia, Bar)</option>
+                                        <option value="teacher">Profesor</option>
+                                    </select>
+                                    {% if errors.has('user_type') is not empty %}
+                                        <span class="help-block">{{ errors.first('user_type') }}</span>
+                                    {% endif %}
+                                </div>#}
+
+                                <div class="form-group {{ errors.has('name') ? ' has-error' : '' }}">
+                                    <label>Nombre</label>
+                                    <input type="text" name="email" class="form-control" id="" value="{{ old('name') }}">
+                                    {% if errors.has('name') is not empty %}
+                                        <span class="help-block">{{ errors.first('name') }}</span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="form-group {{ errors.has('last_name') ? ' has-error' : '' }}">
+                                    <label>Apellido</label>
+                                    <input type="text" name="last_name" class="form-control" id="" value="{{ old('last_name') }}">
+                                    {% if errors.has('last_name') is not empty %}
+                                        <span class="help-block">{{ errors.first('last_name') }}</span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="form-group {{ errors.has('email') ? ' has-error' : '' }}">
+                                    <label>Email</label>
+                                    <input type="text" name="email" class="form-control" id="" value="{{ old('email') }}">
+                                    {% if errors.has('email') is not empty %}
+                                        <span class="help-block">{{ errors.first('email') }}</span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="form-group {{ errors.has('password') ? ' has-error' : '' }}">
+                                    <label>Contraseña</label>
+                                    <input type="password" name="password" class="form-control" id="" value="">
+                                    {% if errors.has('password') %}
+                                        <span class="help-block">{{ errors.first('password') }}</span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="form-group {{ errors.has('password2') ? ' has-error' : '' }}">
+                                    <label>Repetir Contraseña</label>
+                                    <input type="password" name="password2" class="form-control" id="" value="">
+                                    {% if errors.has('password2') %}
+                                        <span class="help-block">{{ errors.first('password2') }}</span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        Al registrarse usted esta de acuerdo con los <a href="/terms">Términos y Condiciones</a>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-raised btn-block ripple-effect">
+                                    Registrate!
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- /inner wrap -->
+                </div>
+            </div>
+
+        </section>
+    </div>
+{% endblock %}

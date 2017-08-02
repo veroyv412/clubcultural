@@ -1,0 +1,28 @@
+<div class="widget widget-menu">
+    <hr data-symbol="CATEGORIAS">
+    <!-- Sidebar navigation -->
+    <ul class="nav sidebar-nav">
+        <li class="dropdown open">
+            <a class="ripple-effect dropdown-toggle" href="/category/today">
+                Hoy
+                <span class="sidebar-badge">
+                    {{ today_deals | length }}
+                  </span>
+                </b>
+            </a>
+        </li>
+        {% for category in categories_count %}
+        <li class="dropdown open">
+            <a class="ripple-effect dropdown-toggle" href="/category/{{ category.category_slug }}">
+                {{ category.category_name }}
+                  <span class="sidebar-badge">
+                    {{ category.count }}
+                  </span>
+
+                </b>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <!-- Sidebar divider -->
+</div>

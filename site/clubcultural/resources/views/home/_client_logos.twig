@@ -1,0 +1,48 @@
+<style>
+    #owl-demo .item{
+        margin: 5px;
+    }
+    #owl-demo .item img{
+        display: block;
+        width: 100px;
+        height: auto;
+    }
+</style>
+<div class="shadow bg-white mTop-30 frameLR">
+    <div class="row">
+        <div class="col-sm-12 clearfix">
+            <div class="hr-link">
+                <hr class="mBtm-50 mTop-30" data-symbol="NUESTROS CLIENTES">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div id="owl-demo">
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/cubarte.png" alt="Cubarte"></div>
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/awala.png" alt="Academia Awala"></div>
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/academia_bailemos.png" alt="Academia Bailemos"></div>
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/academia_mamboEn2.png" alt="Academia Mambo en 2"></div>
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/academia_vivra_dance.png" alt="Academia Vivra Dance"></div>
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/azucar_belgrano.png" alt="Azucar Belgrano"></div>
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/la_bodeguita_del_medio.png" alt="La Bodeguita del Medio"></div>
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/mojitos_de_cuba.png" alt="Mojitos de Cuba"></div>
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/oye_chico.png" alt="Oye Chico"></div>
+                <div class="item"><img class="lazyOwl" data-src="/images/business_logos/saoco.png" alt="Saoco"></div>
+            </div>
+        </div>
+
+    </div>
+    <!--/.row -->
+</div>
+<script type="application/javascript">
+    $(document).ready(function() {
+        $("#owl-demo").owlCarousel({
+            autoPlay: 3000, //Set AutoPlay to 3 seconds
+            items : 7,
+            lazyLoad : true,
+            stopOnHover : true,
+            autoHeight : true,
+        });
+    });
+</script>

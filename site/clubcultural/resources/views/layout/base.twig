@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" style="height:auto;">
+{% block head %}
+<head>
+    <title>{% block title %}Club Cultural{% endblock %}</title>
+
+    <!-- These 3 MUST come first for Bootstrap to work. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#005281">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Variant HTML Builder by Medium Rare</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/themify-icons.css" rel="stylesheet">
+        <link href="/css/font-awesome.css" rel="stylesheet">
+        <link href="/css/animate.min.css" rel="stylesheet">
+        <link href="/css/animsition.css" rel="stylesheet">
+        <link href="/css/plugins.min.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="/images/tocororo.png">
+        <link rel="apple-touch-icon" href="#">
+        <link rel="apple-touch-icon" sizes="72x72" href="#">
+        <link rel="apple-touch-icon" sizes="114x114" href="#">
+
+        <script src="/js/jquery.min.js"></script>
+
+        <link href="/owl.carousel/owl.carousel.css" rel="stylesheet">
+        <link href="/owl.carousel/owl.theme.css" rel="stylesheet">
+        <link href="/owl.carousel/owl.transitions.css" rel="stylesheet">
+        <script src="/owl.carousel/owl.carousel.min.js"></script>
+    </head>
+</head>
+{% endblock %}
+
+<body>
+    <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+        {{ include('/layout/_header.twig') }}
+        {{ include('/layout/_search.twig') }}
+        {% block content %}{% endblock %}
+    </div>
+
+    {{ include('/layout/_footer.twig') }}
+    <script src="/js/kupon.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.animsition.min.js"></script>
+    <script src="/js/jquery.flexslider-min.js"></script>
+    <script src="/js/plugins.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,14 @@
+{
+    "name":"clubcultural",
+    "description":" ",
+    "license":"proprietary",
+    "require": {
+        "laravel/installer": "^1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.7.*"
+    },
+    "autoload": {
+        "classmap": []
+    }
+}

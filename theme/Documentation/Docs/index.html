@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MADISON Documentation</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Add custom CSS here -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic|Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body data-spy="scroll" data-target=".sidebar-brand">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="#">KUPON</a>
+
+                </li>
+                <li><a href="#introduction" class="scroll">Introduction</a>
+                </li>
+                <li><a href="#html" class="scroll">HTML</a>
+                </li>
+                
+                <li><a href="#contactform" class="scroll">Contact Form</a>
+                </li>
+                <li><a href="#css">CSS</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- Page content -->
+        <div id="page-content-wrapper">
+            <div class="content-header">
+                <h1>
+                  <a id="menu-toggle" href="#" class="btn btn-default"><i class="fa fa-bars"></i></a>
+               </h1>
+            </div>
+            <!-- Keep all page content within the page-content inset div! -->
+            <div class="page-content inset">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h1 class="logo">Kupon</h1>
+                        <span class="logo-span grey">KUPON & Deals and coupons html template</span>
+                        <div class="meta">
+                            Created on: Maj 29th, 2015
+                            <br>
+                            <em>by</em>  <a href="http://themeforest.net/user/codenpixel">Codenpixel</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h1>Update</h1>
+                        <div class="meta">
+                            <p>First Release</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="row" id="introduction">
+                    <div class="col-sm-10">
+
+                        <h4>Hi, Thanks for purchasing my work !<small class="grey"> And it is not just a sentence.I really mean it !</small> </h4>
+                        <br>
+                        <br>
+                        <h3>KUPON template introduction</h3>
+                        <p>Kupon is the simple deals and cuopons template designed to help everyone build their own affilliate site. This special template is suited to almost eny site that deal with discounts offers. It is a built with Bootstrap 3+ Framework and the Advanced Custom Modules.</p>
+                        <br>
+                        <br>
+                        <h4>Introduction</h4>
+                        <p>Frequently asked questions regarding the Madison HTML template.</p>
+                        <p>If you have trouble working with Bootstrap, please visit FAQ as it covers most of the frequently asked question. If we don't have it covered yet, please, email me at support@pamukovic.com or via my <a href="http://themeforest.net/user/codenpixel"><b>Themeforest profile</b></a>, or send a tweet to @codenpixel and I'll be happy to have a look at it.</p>
+                        <br>
+                        <br>
+                        <h4 id="html">HTML Structure</h4>
+                        <p>The layout is flexible,we use "grid" system, so you can make any configuration (please refer to the "<a href="http://www.getbootstrap.com">" Bootstrap online Documentation "</a> for more details. The general template structure is the same throughout the template.</p>
+                        <br>
+                        <br>
+                        <h4>NAVIGATION AND LOGO PART</h4>
+                        <p>To edit the logo you can simply replace the "logo.png" with your file, if you intend to use a png file. you can tweak size for your logo in style.css file. Jujst after line 15.</b>
+                        </p>
+                       
+                        <br>
+                    </div>
+                    <!-- //col -->
+                </div>
+                <!-- //row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <pre class="prettyprint  linenums">
+                        <code>
+             &lt;nav class=&quot;navbar navbar-static-top nav-white&quot; id=&quot;main_navbar&quot; role=&quot;navigation&quot;&gt;
+                  &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
+                  &lt;div class=&quot;navbar-header&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#Navbar&quot;&gt;
+                      &lt;span class=&quot;sr-only&quot;&gt;
+                        Toggle navigation
+                                  &lt;/span&gt;
+                                  &lt;span class=&quot;icon-bar&quot;&gt;
+                                  &lt;/span&gt;
+                                  &lt;span class=&quot;icon-bar&quot;&gt;
+                                  &lt;/span&gt;
+                                  &lt;span class=&quot;icon-bar&quot;&gt;
+                                  &lt;/span&gt;
+                              &lt;/button&gt;
+                              &lt;a href=&quot;index.html&quot; class=&quot;navbar-brand logo col-sm-3&quot;&gt;
+                                &lt;img src=&quot;images/logo.png&quot; alt=&quot;&quot; class=&quot;img-responsive&quot;&gt;
+                              &lt;/a&gt;
+                          &lt;/div&gt;
+                          &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
+                          &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;Navbar&quot;&gt;
+                            &lt;!-- regular link --&gt;
+                            &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+                              &lt;li class=&quot;dropdown&quot;&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;
+                                  &lt;i class=&quot;ti-home&quot;&gt;
+                                  &lt;/i&gt;
+                                  Home
+                                  &lt;span class=&quot;caret&quot;&gt;
+                                  &lt;/span&gt;
+                                &lt;/a&gt;
+                                &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;index.html&quot;&gt;
+                                      Primary
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;index_2.html&quot;&gt;
+                                      Secondary
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                &lt;/ul&gt;
+                              &lt;/li&gt;
+                              &lt;li class=&quot;dropdown&quot;&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;
+                                  Pages 
+                                  &lt;span class=&quot;caret&quot;&gt;
+                                  &lt;/span&gt;
+                                &lt;/a&gt;
+                                &lt;ul class=&quot;dropdown-menu&quot; role=&quot;menu&quot;&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;details_2.html&quot;&gt;
+                                      Deal Page 1
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;details.html&quot;&gt;
+                                      Deal Page 2
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;results.html&quot;&gt;
+                                      Search Results
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;contact.html&quot;&gt;
+                                      Contact
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;faq.html&quot;&gt;
+                                      FAQ page
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;sumbit.html&quot;&gt;
+                                      Sumbit deal
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;registration.html&quot;&gt;
+                                      Registration
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;cart.html&quot;&gt;
+                                      Cart Page
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;checkout.html&quot;&gt;
+                                      Checkout
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                    &lt;a href=&quot;features.html&quot;&gt;
+                                      Shortcodes
+                                    &lt;/a&gt;
+                                  &lt;/li&gt;
+                                &lt;/ul&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                &lt;a href=&quot;results.html&quot;&gt;
+                                  Categories
+                                &lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                &lt;a href=&quot;sumbit.html&quot;&gt;
+                                  Sumbit
+                                &lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                &lt;a href=&quot;contact.html&quot;&gt;
+                                  Contact
+                                &lt;/a&gt;
+                              &lt;/li&gt;
+                            &lt;/ul&gt;
+                          &lt;/div&gt;
+                      &lt;/nav&gt;
+                    </code>
+</pre>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3>Background image,Parallax sections</h3>
+                                <p>Adding background image is very easy</p>
+                                <p>Please take a look at line 3 below.If using parallax,don't forget to set ratio (scolling speed for backgound image).Dont like parallax,simple remove data-stellar-background-ratio= from the code.Background image can be placed on any element using this metod.Note that! Same approcah is used for slider as well.</p>
+                                <br>
+                            </div>
+                            <br>
+                        </div>
+                        <pre class="prettyprint linenums">
+                            <code class="language-html" data-lang="html">
+                            &lt;!-- start: HERO --&gt;
+            &lt;div class=&quot;hero full-height bg-image overlay&quot; data-stellar-background-ratio=&quot;0.3&quot; data-image-src=&quot;images/slide-14.jpg&quot;&gt;
+                &lt;div class=&quot;container valign&quot;&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col-sm-6&quot;&gt;
+                            &lt;h1 class=&quot;font-white&quot;&gt;Madison Template&lt;/h1&gt;
+                            &lt;p class=&quot;lead font-white&quot;&gt;Template for A creative web design agency, focused on unique, stylish and usable experiences across all devices.&lt;/p&gt;
+                            &lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-round btn-default btn-fill&quot;&gt;Get in Touch&lt;/a&gt;
+                                &lt;a href=&quot;#&quot; class=&quot;btn btn-round btn-dark btn-fill&quot;&gt;Get a quote&lt;/a&gt;
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;!-- /row --&gt;
+                &lt;/div&gt;
+                &lt;!-- /container --&gt;
+            &lt;/div&gt;
+            &lt;!-- end: HERO --&gt;
+                        </code>
+                        </pre>
+
+
+
+                        
+                        
+                        <div class="row" id="contactform">
+                            <div class="col-sm-12">
+                                <h3>Contact form seetings ?</h3>
+                                <p>Sorry,no contact form included.</p>
+
+                                <br>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row" id="css">
+                            <div class="col-sm-12">
+                                <h3>How to customize a theme</h3>
+                                <br>
+                                <br>
+                                <p>In this tutorial we'll show you, how to start customizing a Warp theme and which tools you need to learn to make small modifications like changing the look and colors of a theme.</p>
+                                <br>
+                                <br>
+                                <h4>Web Developer tools</h4>
+                                <br>
+
+                                <p>Whenever you try customizing our templates we highly recommend using Web Developer Tools like the famous Firebug plugin for Firefox. Other browsers like Chrome, Opera or Safari include very similar functionalities. Using these tools you have the possibility of easily trying out CSS styles right in your browser and inspecting existing styles to find their location in the theme's CSS files.</p>
+                                <br>
+                                <br>
+                                <h4>Editing CSS styles directly in your browser</h4>
+                                <br>
+
+                                <p>Bring up Firebug by right-clicking on an interesting element and choosing "Inspect Element". On the left side you see the html-structure of your document (make sure you have the HTML-Tab enabled). Here you have the possibility to add and edit attributes and their values. Just double-click parts of the code to edit them.</p>
+                                <img src="images/customize_firebug.png" class="img-responsive" alt="Web Developer Tools">
+                                <br>
+                                <p>Even more interesting is the right side of the plugin, here you see all css-styles for the selected element. If you want to edit something just double click on it, enter your new value and press enter when you are done. You will notice that Firebug opens a new empty line so you can not only edit existing styles but also add new ones. Firebug even shows you the computed style-values for the selected element, make sure you have activated the style-tab for our example.</p>
+                                <br>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h2>Resources</h2>
+                                <p>Well,depending on several parameters.</p>
+                                <br>
+                                <p><b>I'm bored, I could learn something</b>
+                                </p>
+                                <p>It wil be great to learn something more about Bootstrap,please visit <a href="http://www.w3schools.com/bootstrap/default.asp">" Learn Bootstrap "</a>
+                                    <p>CSS will work too,please visit <a href="http://www.w3schools.com/css/">" Learn CSS "</a> 
+                                    </p>
+                                    <br>
+                                    <p><b>Nah, I'm not interested.Please tell me who can take care of everything</b>
+                                    </p>
+                                    <p>Need someone to handle everything for you,then please visit <a href="http://studio.envato.com/?ref=codenpixel">" Envato studio "</a>
+                                        <br>
+                                        <br>
+
+
+                                        <p>
+                                            <b>Tools and apps</b>
+                                        </p>
+                                        <p>Firebug for firefox browser,must have! To download please visit <a href="http://getfirebug.com/">" Get FireBug "</a>
+                                        </p>
+                                        <p>F12 if usign Chrome. Find out more about <a href="https://developer.chrome.com/devtools">"Developer tools "</a>
+                                            <p>HTML editor,great one for free. Brackets! Download <a href="http://brackets.io/">"Here "</a>
+                                            </p>
+                                            <br>
+                                            <br>
+                                            <p>
+                                                <b>Free Images</b>
+                                            </p>
+                                            <p><a href="http://www.gratisography.com/">"Gratisography"</a>
+                                            </p>
+                                            <p><a href="https://unsplash.com/">"Unsplash"</a>
+                                            </p>
+
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <p><i>Once again, thank you so much for purchasing my work. As I said at the beginning, I'd be glad to help you if you have any questions. No guarantees, but I'll do my best to assist. If you have a more general question relating to the theme you can shoot me an e-mail via my ThemeForest profile, you might consider visiting the forums and asking your question in the "Item Discussion" section as well.</i>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <!-- Custom JavaScript for the Menu Toggle -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("active");
+        });
+
+        $(function () {
+            window.prettyPrint && prettyPrint()
+        })
+
+
+         var hashTagActive = "";
+        $(".scroll").click(function (event) {
+            if (hashTagActive != this.hash) { //this will prevent if the user click several times the same link to freeze the scroll.
+                event.preventDefault();
+                //calculate destination place
+                var dest = 0;
+                if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+                    dest = $(document).height() - $(window).height();
+                } else {
+                    dest = $(this.hash).offset().top;
+                }
+                //go to destination
+                $('html,body').animate({
+                    scrollTop: dest
+                }, 1100, 'swing');
+                hashTagActive = this.hash;
+            }
+        });
+    </script>
+</body>
+
+</html>

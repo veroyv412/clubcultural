@@ -1,0 +1,172 @@
+{% block page_title %}Home{% endblock %}
+{% extends 'layout/base.twig' %}
+{% block title %}Club Cultural{% endblock %}
+
+{% block content %}
+    <section id="inner-page" class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="widget-inner bg-white shadow">
+                    <div class="buyPanel animated fadeIn bg-white Aligner text-center">
+                        <div class="content" style="width: 100%;">
+                            <div class="deal-content">
+                                <h3>
+                                    {{ deal.title }}
+                                </h3>
+                                <p>
+
+                                </p>
+                            </div>
+                            <div class="price">
+                                <h1>
+                                    ${{ deal.discount_price }}
+                                </h1>
+                            </div>
+                            <div class="buy-now mBtm-30">
+                                {% if not Auth.check() %}
+                                    <a class="btn btn-danger btn-lg btn-raised ripple-effect btn-block" href="/signup?user_type=member">
+                                        SUSCRIBITE
+                                    </a>
+                                {% else %}
+                                    <a class="btn btn-primary btn-lg btn-raised ripple-effect btn-block" href="/deal-get/{{ deal.id }}">
+                                        OBTENE DESCUENTO
+                                    </a>
+                                {% endif %}
+                            </div>
+                            <div class="dealAttributes">
+                                <div class="valueInfo bg-light">
+                                    <div class="value">
+                                        <p class="value">
+                                            ${{ deal.price }}
+                                        </p>
+                                        <p class="text">
+                                            Valor
+                                        </p>
+                                    </div>
+                                    <div class="discount">
+                                        <p class="value">
+                                            {{ deal.discount }}%
+                                        </p>
+                                        <p class="text">
+                                            Descuento
+                                        </p>
+                                    </div>
+                                    <div class="save">
+                                        <p class="value">
+                                            ${{ deal.price - deal.discount_price }}
+                                        </p>
+                                        <p class="text">
+                                            AHORRO
+                                        </p>
+                                    </div>
+                                </div>
+                                <!--/.social sharing -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget-add">
+                        <hr data-symbol="{{ deal.business.company_name | upper }}">
+                        <img src="{{ deal.business.company_logo }}" alt="add" class="img-responsive">
+
+                        <div class="valueInfo" style="padding: 10px; background-color: #fafafa">
+                            {% if deal.business.email is not empty %}
+                                <h5><a href="mailto:{{ deal.business.email }}"><i class="fa fa-envelope" aria-hidden="true"></i> {{ deal.business.email }}</a></h5>
+                            {% endif %}
+                            {% if deal.business.company_location is not empty %}
+                                <h5><i class="fa fa-map-marker" aria-hidden="true"></i> {{ deal.business.company_location }}</h5>
+                            {% endif %}
+                            {% if deal.business.company_phone is not empty %}
+                               <h5><i class="fa fa-phone" aria-hidden="true"></i> {{ deal.business.company_phone }}</h5>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                    <div class="widget">
+                        <hr data-symbol="COMPARTILO">
+                        <div class="share-wrap">
+                            <div class="share-buttons">
+                                <a target="_blank" href="http://twitter.com/share?url={{ URL.to('/deal/'~deal.id) }}" class="button twitter">
+                                    <i class="ti-twitter"></i>
+                                    Twitter
+                                </a>
+                                <a target="_blank" href="http://www.facebook.com/sharer.php?u={{ URL.to('/deal/'~deal.id) }}" class="button facebook">
+                                    <i class="ti-facebook"></i>
+                                    Facebook
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/inner widget -->
+
+            </div>
+            <div class="col-sm-8">
+                <div class="post-media">
+                    <div id="slider" class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <img class="img-responsive" alt="" src="{{ deal.featured_image }}">
+                            </li>
+                            {% for image in deal.images %}
+                            <li>
+                                <img class="img-responsive" alt="" src="{{ image.url }}">
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!--/slider -->
+                </div>
+                <!--/.post media -->
+                <div role="tabpanel" id="tabs" class="tabbable responsive widget-inner shadow bg-white">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#tab-1" aria-controls="home" role="tab" data-toggle="tab">
+                                Detalles
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#map" aria-controls="map" role="tab" data-toggle="tab">
+                                Mapa &amp; y Dirección
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <div class="tab-content">
+                                <div class="tab-pane fade active in" id="tab-1">
+                                    <h4>
+                                        Descripción
+                                    </h4>
+                                    <p class="lead">
+                                        <i>
+                                            {{ deal.description }}
+                                        </i>
+                                    </p>
+                                </div>
+                                <!-- /tab content -->
+                                <div role="tabpanel" class="tab-pane" id="map">
+                                    <!-- Google map, just iframe for now -->
+                                    <div class="google-maps">
+                                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCntAqXItk8nXjhr2dwNk_-CJGqIFtB7mY&q={{ deal.business.company_location | e }}" width="600" height="450" frameborder="0" style="border:0">
+                                        </iframe>
+                                    </div>
+                                    <!-- /google map -->
+                                </div>
+                                <!-- /tab -->
+                            </div>
+                        </div>
+                        <!--/tabs -->
+                    </div>
+                    <!-- /inner widget -->
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+{% endblock %}
