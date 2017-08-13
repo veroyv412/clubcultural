@@ -4,6 +4,7 @@ namespace Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\MailResetPasswordToken;
 
 class User extends Authenticatable
 {
@@ -28,5 +29,9 @@ class User extends Authenticatable
     public function role()
     {
         return $this->hasOne('Models\Role', 'id', 'role_id');
+    }
+
+    public function sendPasswordResetNotification($token){
+        $this->notify(new MailResetPasswordToken($token));
     }
 }

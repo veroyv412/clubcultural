@@ -1,0 +1,53 @@
+{% block page_title %}Home{% endblock %}
+{% extends 'layout/auth_base.twig' %}
+{% block title %}Club Cultural{% endblock %}
+
+{% block header %}
+    {{ include('/layout/_top_bar_auth.twig') }}
+{% endblock %}
+
+
+{% block content %}
+    <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
+        <section id="page" class="container mTop-30 mBtm-50">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel-body frameLR bg-white shadow space-sm">
+                        {% if session_has('status') is not empty %}
+                        <div class="alert alert-success">
+                            {{ session_get('status') }}
+                        </div>
+                        {% endif %}
+
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
+                            {{ csrf_field() }}
+                            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                                <h3 class="dark-grey text-center">
+                                    Actualiza tu contraseña
+                                </h3>
+
+                                <div class="form-group {{ errors.has('email') ? ' has-error' : '' }}">
+                                    <label>Email</label>
+                                    <input type="text" name="email" class="form-control" id="" value="{{ old('email') }}">
+                                    {% if errors.has('email') is not empty %}
+                                        <span class="help-block">{{ errors.first('email') }}</span>
+                                    {% endif %}
+                                </div>
+
+                                <div class="form-group ">
+                                    <button type="submit" class="btn btn-primary btn-raised btn-block ripple-effect">
+                                        Enviar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- /inner wrap -->
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+{% endblock %}

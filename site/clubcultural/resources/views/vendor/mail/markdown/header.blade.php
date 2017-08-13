@@ -1,0 +1,1 @@
+[![{{$slot}}]({{url('images/logo2.png')}})]({{$url}})

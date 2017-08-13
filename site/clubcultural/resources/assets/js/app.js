@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * include Vue and Vue Resource. This gives a great starting point for
@@ -13,8 +12,9 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.component('owl-slider', require('./components/OwlSlider.vue'));
 
 const app = new Vue({
-    el: '#app'
+    delimiters: ['{{{', '}}}'],
+    el: '#application'
 });

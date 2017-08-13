@@ -1,9 +1,5 @@
-
-  
-
-(function($) {
+$(window).on('load', function() {
     "use strict";
-    
     var dropdown = $('.dropdown');
 
     // Add slidedown animation to dropdown
@@ -15,10 +11,7 @@
     dropdown.on('hide.bs.dropdown', function(e){
         $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
     });
-})(jQuery);
 
-$(window).load(function() {
-    "use strict";
     //Grid slider,used on index_2.html
     $('#grid-slider').flexslider({
         animation: "slide",
@@ -27,14 +20,22 @@ $(window).load(function() {
         nextText: '<i class="ti-angle-right"></i>',
         prevText: '<i class="ti-angle-left"></i>'
     });
-    
+
     $('#ad-slider').flexslider({
         slideshowSpeed: 3000,
         animation: "fade",
         smoothHeight: true,
         controlNav: false,
     });
-    
+
+    $("#home-client-logos-slider").owlCarousel({
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+        items : 7,
+        lazyLoad : true,
+        stopOnHover : true,
+        autoHeight : true,
+    });
+
     // The slider being synced must be initialized first
     $('#carousel').flexslider({
         animation: "slide",
@@ -62,17 +63,17 @@ $(window).load(function() {
             columnWidth: '.grid-sizer'
         }
     });
-    
-     $('.truncate').succinct({
-         size: 80
-     });
+
+    $('.truncate').succinct({
+        size: 80
+    });
 });
 
 
 // Seetings for loader
 $(document).ready(function() {
     "use strict";
-     
+
     $(".animsition").animsition({
 
         inClass: 'fade-in',
@@ -96,16 +97,18 @@ $(document).ready(function() {
         overlayClass: 'animsition-overlay-slide',
         overlayParentElement: 'body'
     });
-// Responsive video 
+    // Responsive video
     $(".responsive-video").fitVids();
-// Responsive tabs
+
+    // Responsive tabs
     $('.nav-tabs:first').tabdrop({
         text: '<i class="ti-menu"></i>'
     });
-// Light box image
+
+    // Light box image
     $('.popup-img').magnificPopup({
         type: 'image'
-            // other options
+        // other options
     });
 
     // This will create a single gallery from all elements that have class "gallery-item"
@@ -115,51 +118,40 @@ $(document).ready(function() {
             enabled: true
         }
     });
-// Add image via data 
+
+    // Add image via data
     $(".bg-image").css('background', function() {
         var bg = ('url(' + $(this).data("image-src") + ') no-repeat center center');
         return bg;
     });
+
     // fit image nicely
     $(".bg-image").css("background-size", "cover");
 
-
-
-
- // Collapse,icon change
+    // Collapse,icon change
     $('.collapse').on('shown.bs.collapse', function() {
         $(this).parent().find(".ti-plus").removeClass("ti-plus").addClass("ti-minus");
     }).on('hidden.bs.collapse', function() {
         $(this).parent().find(".ti-minus").removeClass("ti-minus").addClass("ti-plus");
     });
 
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        $('a[data-toggle="tab"]').removeClass('btn-primary');
+        $('a[data-toggle="tab"]').addClass('btn-default');
+        $(this).removeClass('btn-default');
+        $(this).addClass('btn-primary');
+    });
 
-});
+    $('.next').click(function(){
+        var nextId = $(this).parents('.tab-pane').next().attr("id");
+        $('[href=#'+nextId+']').tab('show');
+    });
 
-// Wizards forms
-(function($) {
-    "use strict";
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-            $('a[data-toggle="tab"]').removeClass('btn-primary');
-            $('a[data-toggle="tab"]').addClass('btn-default');
-            $(this).removeClass('btn-default');
-            $(this).addClass('btn-primary');
-        })
+    $('.prev').click(function(){
+        var prevId = $(this).parents('.tab-pane').prev().attr("id");
+        $('[href=#'+prevId+']').tab('show');
+    });
 
-        $('.next').click(function(){
-            var nextId = $(this).parents('.tab-pane').next().attr("id");
-            $('[href=#'+nextId+']').tab('show');
-        })
-
-        $('.prev').click(function(){
-            var prevId = $(this).parents('.tab-pane').prev().attr("id");
-            $('[href=#'+prevId+']').tab('show');
-        })
-
-})(jQuery);
-// Ripple-effect animation for buttons
-(function($) {
-    "use strict";
     $(".ripple-effect").click(function(e) {
         var rippler = $(this);
 
@@ -191,11 +183,5 @@ $(document).ready(function() {
             top: y + 'px',
             left: x + 'px'
         }).addClass("animate");
-    })
-})(jQuery);
-
-
-
-
-
-
+    });
+});

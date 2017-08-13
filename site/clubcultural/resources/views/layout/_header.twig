@@ -1,44 +1,5 @@
 <header>
-    <div class="top-bar bg-light hdden-xs">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 list-inline list-unstyled no-margin hidden-xs">
-                    <p class="no-margin">
-                        Tienes Preguntas?
-                        <strong>
-                            +542235560011
-                        </strong>
-                        or clubcultural@gmail.com
-                    </p>
-                </div>
-                <div class="pull-right col-sm-6">
-                    <ul class="list-inline list-unstyled pull-right">
-                        {% if logged_user is empty %}
-                        <li>
-                            <a href="/login">
-                                Inicia Sesión
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/signup">
-                                Registrate
-                            </a>
-                        </li>
-                        {% else %}
-                            <li>
-                                Bienvenid@ {{ logged_user.name }}!
-                            </li>
-                            <li>
-                                <a href="/logout">
-                                    Cerrar Sesión
-                                </a>
-                            </li>
-                        {% endif %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{ include('/layout/_top_bar.twig') }}
     <div id="nav-wrap">
         <div class="nav-wrap-holder">
             <div class="container" id="nav_wrapper">

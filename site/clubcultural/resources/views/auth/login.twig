@@ -2,13 +2,17 @@
 {% extends 'layout/auth_base.twig' %}
 {% block title %}Club Cultural{% endblock %}
 
+{% block header %}
+    {{ include('/layout/_top_bar_auth.twig') }}
+{% endblock %}
+
 {% block content %}
     <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
         <section id="page" class="container mTop-30 mBtm-50">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="panel-body frameLR bg-white shadow space-sm">
-                        <form method="POST" action="login">
+                        <form method="POST" action="{{ url('/login') }}">
                             {{ csrf_field() }}
                             <div class="col-xs-12 col-md-6 col-md-offset-3">
                                 <h3 class="dark-grey text-center">

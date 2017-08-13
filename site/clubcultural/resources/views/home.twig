@@ -5,6 +5,7 @@
 {% block content %}
     {{ include('home/_slider.twig', { slider_deals: slider_deals }) }}
     <section id="page" class="container">
+        {{ message }}
         {{ include('home/_client_logos.twig') }}
         <div class="row">
             <div class="col-sm-8">
@@ -15,7 +16,7 @@
                 <div class="inner-side shadow">
                     {{ include('widgets/ad.twig') }}
                     {% if not Auth.check() %}
-                    {{ include('widgets/subscribe.twig') }}
+                        {{ include('widgets/subscribe.twig') }}
                     {% endif %}
                     {{ include('widgets/categories.twig') }}
                     {{ include('widgets/popular_tags.twig') }}
