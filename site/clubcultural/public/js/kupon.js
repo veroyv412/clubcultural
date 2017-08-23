@@ -11,30 +11,7 @@ $(window).on('load', function() {
     dropdown.on('hide.bs.dropdown', function(e){
         $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
     });
-
-    //Grid slider,used on index_2.html
-    $('#grid-slider').flexslider({
-        animation: "slide",
-        smoothHeight: true,
-        controlNav: false,
-        nextText: '<i class="ti-angle-right"></i>',
-        prevText: '<i class="ti-angle-left"></i>'
-    });
-
-    $('#ad-slider').flexslider({
-        slideshowSpeed: 3000,
-        animation: "fade",
-        smoothHeight: true,
-        controlNav: false,
-    });
-
-    $("#home-client-logos-slider").owlCarousel({
-        autoPlay: 3000, //Set AutoPlay to 3 seconds
-        items : 7,
-        lazyLoad : true,
-        stopOnHover : true,
-        autoHeight : true,
-    });
+    
 
     // The slider being synced must be initialized first
     $('#carousel').flexslider({
@@ -74,7 +51,7 @@ $(window).on('load', function() {
 $(document).ready(function() {
     "use strict";
 
-    $(".animsition").animsition({
+    /*$(".animsition").animsition({
 
         inClass: 'fade-in',
         outClass: 'fade-out',
@@ -96,7 +73,7 @@ $(document).ready(function() {
 
         overlayClass: 'animsition-overlay-slide',
         overlayParentElement: 'body'
-    });
+    });*/
     // Responsive video
     $(".responsive-video").fitVids();
 

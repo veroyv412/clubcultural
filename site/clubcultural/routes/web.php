@@ -21,6 +21,8 @@ Route::post('/search', 'SearchController@getDealsSearch');
 Route::get('/deal/{deal_id}', 'DealController@getDeal');
 Route::get('/deal-get/{deal_id}', 'DealController@getDealBuy');
 
+Route::get('/featured-deals/{weight}', 'DealController@getFeaturedDeals');
+
 //Authentication
 Route::get('/login', 'Auth\LoginController@getLogin')->name('login');
 Route::post('/login', 'Auth\LoginController@postLogin');

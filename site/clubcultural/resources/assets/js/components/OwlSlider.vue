@@ -17,9 +17,18 @@
         },
 
         mounted() {
-            this.$http.get(this.jsonList).then(response => {
+            axios.get(this.jsonList).then(response => {
                 // get body data
-                this.items = response.body;
+                this.items = response.data;
+                setTimeout(() => {
+                    jQuery("#home-client-logos-slider").owlCarousel({
+                        autoPlay: 3000, //Set AutoPlay to 3 seconds
+                        items : 7,
+                        lazyLoad : true,
+                        stopOnHover : true,
+                        autoHeight : true,
+                    });
+            }, 0);
             }, response => {});
         }
     }

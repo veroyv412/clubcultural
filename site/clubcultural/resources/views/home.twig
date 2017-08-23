@@ -3,21 +3,38 @@
 {% block title %}Descuentos pa ti{% endblock %}
 
 {% block content %}
-    {{ include('home/_slider.twig', { slider_deals: slider_deals }) }}
+
+    <div class="slider">
+        <div class="container">
+            <div class="row">
+                <div id="grid-slider" class="flexslider">
+                    <featured-one-boxes inline-template>
+                        <ul class="slides">
+                            <featured-one-box v-for="deal in deals" :key="deal.id" :deal="deal"></featured-one-box>
+                        </ul>
+                    </featured-one-boxes>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section id="page" class="container">
         {{ message }}
+
         {{ include('home/_client_logos.twig') }}
         <div class="row">
             <div class="col-sm-8">
-                {{ include('widgets/deals.twig', { featured_deals: featured_deals }) }}
+                {{ include('widgets/deals.twig', {}) }}
             </div>
 
             <div class="col-sm-4 sidebar">
                 <div class="inner-side shadow">
-                    {{ include('widgets/ad.twig') }}
+                    <ad-slider identifier="ad-slider" json-list="/json/homeClientLogosSlider.json"></ad-slider>
+
                     {% if not Auth.check() %}
                         {{ include('widgets/subscribe.twig') }}
                     {% endif %}
+
                     {{ include('widgets/categories.twig') }}
                     {{ include('widgets/popular_tags.twig') }}
                     {#{{ include('widgets/best_rated.twig') }}

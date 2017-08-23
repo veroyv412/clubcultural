@@ -7,7 +7,8 @@ window._ = require('lodash');
  * code may be modified to fit the specific needs of your application.
  */
 
-//window.$ = window.jQuery = require('jquery');
+window.$ = window.jQuery = require('jquery');
+window.flexslider = require('flexslider');
 //require('bootstrap-sass');
 
 /**
@@ -18,6 +19,8 @@ window._ = require('lodash');
 
 window.Vue = require('vue');
 require('vue-resource');
+
+
 
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
@@ -30,6 +33,9 @@ Vue.http.interceptors.push((request, next) => {
 
     next();
 });
+
+
+window.axios = require('axios');
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

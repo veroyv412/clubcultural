@@ -17,7 +17,7 @@ class SearchController extends Controller
     public function __construct(){}
 
     public function getCategorySearch(Request $request, $category_slug){
-        $logged_user = Auth::user();
+        $loggedUser = Auth::user();
         $categories = \Models\Category::all();
         $todayName = strtolower(date('l', strtotime('now')));
         $categoryName = '';
@@ -35,12 +35,12 @@ class SearchController extends Controller
             $deals = \Models\Deal::with('category')->with('business')
                 ->join('categories', 'categories.id', '=', 'deals.category_id')
                 ->where('category_slug', '=', $category_slug)
-                ->orderBy('deals.featured ASC')
+                ->orderBy('deals.featured', 'ASC')
                 ->get();
         }
 
         return Twig::render('search', [
-            'logged_user' => $logged_user,
+            'logged_user' => $loggedUser,
             'categories' => $categories,
             'deals' => $deals,
             'category_name' => $categoryName

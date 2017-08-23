@@ -17,6 +17,11 @@ class DealController extends Controller
      */
     public function __construct(){}
 
+    public function getFeaturedDeals(Request $request, $weight = 2){
+        $slider_deals = \Models\Deal::with('business')->where('featured', '=', $weight)->where('deleted', '=', '0')->get();
+        return $slider_deals;
+    }
+    
     public function getDeal(Request $request, $deal_id){
         $logged_user = Auth::user();
         $categories = \Models\Category::all();

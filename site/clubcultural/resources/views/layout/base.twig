@@ -12,6 +12,7 @@
     <meta name="theme-color" content="#005281">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/vendor.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
 
@@ -26,12 +27,13 @@
 
     <script>
         window.Laravel = { 'csrfToken': '{{ csrf_token() }}'};
+        window.baseURL = '{{ url('/') }}';
     </script>
 </head>
 {% endblock %}
 
 <body>
-    <div class="site-wrapper animsition" id="application" data-animsition-in="fade-in" data-animsition-out="fade-out">
+    <div class="site-wrapper _animsition" id="application" data-animsition-in="fade-in" data-animsition-out="fade-out">
         {% block header %}
             {{ include('/layout/_header.twig') }}
         {% endblock %}
@@ -42,7 +44,7 @@
     {{ include('/layout/_footer.twig') }}
 
     <script src="/js/app.js"></script>
-    <script src="/js/vendor.js"></script>
+    <script src="/js/vendor/vendor.js"></script>
     <script src="/js/kupon.js"></script>
 </body>
 

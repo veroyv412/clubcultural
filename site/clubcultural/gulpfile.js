@@ -20,18 +20,17 @@ elixir((mix) => {
         //'vendor/vue.min.js',
         //'vendor/vue-resource.min.js',
     
-        'vendor/jquery.min.js',
+        './node_modules/jquery/dist/jquery.min.js',
         'vendor/bootstrap.min.js',
-        'vendor/jquery.animsition.min.js',
+        './node_modules/animsition/dist/js/animsition.min.js',
         'vendor/jquery.flexslider-min.js',
         'vendor/owl.carousel/owl.carousel.min.js',
         'vendor/plugins.js',
-    ], 'public/js/vendor.js');
+    ], 'public/js/vendor/vendor.js');
 
     mix.styles([
-        'vendor/bootstrap.min.css',
         'vendor/animate.min.css',
-        'vendor/animsition.css',
+        './node_modules/animsition/dist/css/animsition.min.css',
         'vendor/flexslider.css',
         'vendor/font-awesome.css',
         'vendor/plugins.min.css',

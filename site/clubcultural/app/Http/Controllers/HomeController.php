@@ -36,15 +36,11 @@ class HomeController extends Controller
         $logged_user = Auth::user();
         $categories = \Models\Category::all();
         $categoriesCount = \Models\Category::getCategoriesCount();
-        $slider_deals = \Models\Deal::with('business')->where('featured', '=', '1')->where('deleted', '=', '0')->get();
-        $featured_deals = \Models\Deal::with('business')->where('featured', '=', '2')->where('deleted', '=', '0')->get();
         $todayDeals = \Models\Deal::with('business')->where($todayName, '=', '1')->where('deleted', '=', '0')->get();
         
         return Twig::render('home', [
             'logged_user'       => $logged_user,
             'categories'        => $categories,
-            'slider_deals'      => $slider_deals,
-            'featured_deals'    => $featured_deals,
             'categories_count'  => $categoriesCount,
             'today_deals'       => $todayDeals
         ]);

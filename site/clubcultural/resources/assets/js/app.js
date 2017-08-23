@@ -12,7 +12,16 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.filter('truncate', function(text, stop, clamp){
+    return text.slice(0, stop) + (stop < text.length ? clamp || '...' : '')
+});
+
 Vue.component('owl-slider', require('./components/OwlSlider.vue'));
+Vue.component('ad-slider', require('./components/AdSlider.vue'));
+Vue.component('featured-one-box', require('./components/FeaturedOneBox.vue'));
+Vue.component('featured-one-boxes', require('./components/FeaturedOneBoxes.vue'));
+Vue.component('featured-two-box', require('./components/FeaturedTwoBox.vue'));
+Vue.component('featured-two-boxes', require('./components/FeaturedTwoBoxes.vue'));
 
 const app = new Vue({
     delimiters: ['{{{', '}}}'],
