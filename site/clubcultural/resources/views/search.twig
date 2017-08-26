@@ -16,17 +16,18 @@
                 </div>
                 <div class="clearfix"></div>
 
-                {{ include('partials/_search_deals.twig', { deals: deals }) }}
+                <search-deals category_slug="{{ category_name }}" search="{{ search }}"></search-deals>
             </div>
 
             <div class="col-sm-4 sidebar">
                 <div class="inner-side shadow">
-                    {{ include('widgets/ad.twig', { ad_image: 'https://fb-s-b-a.akamaihd.net/h-ak-xfa1/v/t1.0-9/149076_360008724105851_1822486276_n.jpg?oh=fd8000928723f0dc4f0af88d0f23cfaf&oe=58B5DAC3&__gda__=1492978942_64a87f48310f94171f77e1e0b668c8a5' }) }}
+                    <ad-slider identifier="ad-slider" json-list="/json/homeClientLogosSlider.json"></ad-slider>
                     {% if not Auth.check() %}
                         {{ include('widgets/subscribe.twig') }}
                     {% endif %}
-                    {#{{ include('widgets/categories.twig') }}
                     {{ include('widgets/popular_tags.twig') }}
+
+                    {#{{ include('widgets/categories.twig') }}
                     {{ include('widgets/best_rated.twig') }}
                     {{ include('widgets/latest-comments.twig') }}#}
                 </div>

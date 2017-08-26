@@ -589,7 +589,7 @@ class Response
     /**
      * Marks the response as "private".
      *
-     * It makes the response ineligible for serving other clients.
+     * It makes the response ineligible for serving other business.
      *
      * @return $this
      *
@@ -606,7 +606,7 @@ class Response
     /**
      * Marks the response as "public".
      *
-     * It makes the response eligible for serving other clients.
+     * It makes the response eligible for serving other business.
      *
      * @return $this
      *

@@ -19,7 +19,7 @@ class HandlerStack
     private $cached;
 
     /**
-     * Creates a default handler stack that can be used by clients.
+     * Creates a default handler stack that can be used by business.
      *
      * The returned handler will wrap the provided handler or use the most
      * appropriate default handler for you system. The returned HandlerStack has

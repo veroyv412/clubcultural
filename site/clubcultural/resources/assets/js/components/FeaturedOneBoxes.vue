@@ -21,6 +21,7 @@
                         nextText: '<i class="ti-angle-right"></i>',
                         prevText: '<i class="ti-angle-left"></i>'
                     });
+
                 }, 0);
 
             }, response => {});

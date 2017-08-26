@@ -1,0 +1,27 @@
+{% block page_title %}Home{% endblock %}
+{% extends 'layout/base.twig' %}
+{% block title %}Club Cultural{% endblock %}
+
+{% block content %}
+<section id="page" class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="hr-link">
+                <hr class="mBtm-50 mTop-30" data-symbol="ADMINISTRAR CLIENTES">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel-body frameLR bg-white shadow space-sm">
+
+                <business-form business="{{ business }}"></business-form>
+
+            </div>
+            <!-- /inner wrap -->
+        </div>
+    </div>
+</section><br>
+{% endblock %}

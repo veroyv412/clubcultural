@@ -32,7 +32,7 @@ if (isset($_GET['user'])) {
     // $identifier = $tokenCredentials->getIdentifier();
     // $secret = $tokenCredentials->getSecret();
 
-    // Some OAuth clients try to act as an API wrapper for
+    // Some OAuth business try to act as an API wrapper for
     // the server and it's API. We don't. This is what you
     // get - the ability to access basic information. If
     // you want to get fancy, you should be grabbing a

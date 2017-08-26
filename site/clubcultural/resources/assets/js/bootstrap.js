@@ -9,7 +9,8 @@ window._ = require('lodash');
 
 window.$ = window.jQuery = require('jquery');
 window.flexslider = require('flexslider');
-//require('bootstrap-sass');
+
+import Form from './utilities/Form';
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -20,7 +21,7 @@ window.flexslider = require('flexslider');
 window.Vue = require('vue');
 require('vue-resource');
 
-
+window.Form = Form;
 
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of

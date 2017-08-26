@@ -409,7 +409,7 @@ meilleure, imaginant qu'il serait plus libre et pourrait disposer
 de sa personne et de son argent. Mais sa femme fut le maître; il
 devait devant le monde dire ceci, ne pas dire cela, faire maigre
 tous les vendredis, s'habiller comme elle l'entendait, harceler
-par son ordre les clients qui ne payaient pas. Elle décachetait
+par son ordre les business qui ne payaient pas. Elle décachetait
 ses lettres, épiait ses démarches, et l'écoutait, à travers la
 cloison, donner ses consultations dans son cabinet, quand il y
 avait des femmes.
@@ -4231,7 +4231,7 @@ séduction. Le pharmacien disait:
 -- C'est une femme de grands moyens et qui ne serait pas déplacée
 dans une sous-préfecture.
 
-Les bourgeoises admiraient son économie, les clients sa politesse,
+Les bourgeoises admiraient son économie, les business sa politesse,
 les pauvres sa charité.
 
 Mais elle était pleine de convoitises, de rage, de haine. Cette
@@ -12283,7 +12283,7 @@ répondit n'avoir plus rien; la liquidation était close, et il leur
 restait, outre Barneville, six cents livres de rente, qu'elle leur
 servirait exactement.
 
-Alors Madame expédia des factures chez deux ou trois clients, et
+Alors Madame expédia des factures chez deux ou trois business, et
 bientôt usa largement de ce moyen, qui lui réussissait. Elle avait
 toujours soin d'ajouter en post-scriptum: «N'en parlez pas à mon
 mari, vous savez comme il est fier... Excusez-moi... Votre
@@ -13407,7 +13407,7 @@ sa physionomie prenait une expression grave.
 
 -- Tu sais, continuait-elle vite, que mon mari avait placé toute
 sa fortune chez un notaire; il s'est enfui. Nous avons emprunté;
-les clients ne payaient pas. Du reste la liquidation n'est pas
+les business ne payaient pas. Du reste la liquidation n'est pas
 finie; nous en aurons plus tard. Mais, aujourd'hui, faute de trois
 mille francs, on va nous saisir; c'est à présent, à l'instant
 même; et, comptant sur ton amitié, je suis venue.

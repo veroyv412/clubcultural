@@ -27,7 +27,7 @@ interface RequestInterface extends MessageInterface
      * Retrieves the message's request target.
      *
      * Retrieves the message's request-target either as it will appear (for
-     * clients), as it appeared at request (for servers), or as it was
+     * business), as it appeared at request (for servers), or as it was
      * specified for the instance (see withRequestTarget()).
      *
      * In most cases, this will be the origin-form of the composed URI,

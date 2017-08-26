@@ -1,10 +1,12 @@
 <template>
     <li>
         <div class="col-sm-7 col-lg-8 omega">
-            <article class="bg-image entry-lg" :data-image-src="deal.featured_image">
-                <div class="deal-short-entry bg-green">
-                    <p>{{ deal.description | truncate(200) }}</p>
-                </div>
+            <article class="bg-image entry-lg"
+                     :style="{ backgroundImage: 'url(' + deal.featured_image + ')', backgroundPosition: 'center center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }"
+                     :data-image-src="deal.featured_image">
+                    <div class="deal-short-entry bg-green">
+                        <p>{{ deal.description | truncate(200) }}</p>
+                    </div>
             </article>
         </div>
         <div class="col-sm-5 col-lg-4 alpha entry-lg">

@@ -69,7 +69,7 @@ abstract class Swift_Transport_AbstractSmtpTest extends \SwiftMailerTestCase
          session, use of EHLO indicates that the client is able to process
          service extensions and requests that the server provide a list of the
          extensions it supports.  Older SMTP systems which are unable to
-         support service extensions and contemporary clients which do not
+         support service extensions and contemporary business which do not
          require service extensions in the mail session being initiated, MAY
          use HELO instead of EHLO.  Servers MUST NOT return the extended
          EHLO-style response to a HELO command.  For a particular connection
@@ -831,7 +831,7 @@ abstract class Swift_Transport_AbstractSmtpTest extends \SwiftMailerTestCase
      (a single address that resolves into multiple addresses) and the
      appearance of "blind copies".  Especially when more than one RCPT
      command is present, and in order to avoid defeating some of the
-     purpose of these mechanisms, SMTP clients and servers SHOULD NOT copy
+     purpose of these mechanisms, SMTP business and servers SHOULD NOT copy
      the full set of RCPT command arguments into the headers, either as
      part of trace headers or as informational or private-extension
      headers.  Since this rule is often violated in practice, and cannot

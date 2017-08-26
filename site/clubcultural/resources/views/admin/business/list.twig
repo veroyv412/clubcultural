@@ -1,0 +1,78 @@
+{% block page_title %}Home{% endblock %}
+{% extends 'layout/base.twig' %}
+{% block title %}Club Cultural{% endblock %}
+
+{% block content %}
+    <section id="page" class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="hr-link">
+                    <hr class="mBtm-50 mTop-30" data-symbol="ADMINISTRAR CLIENTES">
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 text-right">
+                <a type="submit" href="/admin/client/create" class="btn btn-raised ripple-effect btn-primary">
+                    <i aria-hidden="true" class="fa fa-plus"></i> Agregar Cliente
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-12">
+                <table class="cart-contents">
+                    <thead>
+                        <tr>
+                            <th class="hidden-xs">
+                                Logo
+                            </th>
+                            <th>
+                                Nombre
+                            </th>
+                            <th>
+                                Agregar Descuentos
+                            </th>
+                            <th>
+                                Editar
+                            </th>
+                            <th>
+                                Eliminar
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for business in businesses %}
+                    <tr>
+                        <td class="image hidden-xs">
+                            <img src="{{ business.company_logo  }}" style="max-width: 150px" alt="business.company_name">
+                        </td>
+                        <td class="details">
+                            {{ business.company_name }}
+                        </td>
+                        <td>
+                            <a href="/admin/business/{{ business.id }}/add-deal" class="btn btn-raised ripple-effect btn-primary btn-block">
+                                <i class="ti-plus"></i> Agregar Descuento
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/admin/business/{{ business.id }}/edit" class="btn btn-raised ripple-effect btn-info btn-block">
+                                <i class="ti-marker"></i> Editar
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/admin/business/{{ business.id }}/remove" onclick="return confirm('Estas seguro de eliminar el cliente?')" class="btn btn-danger ripple-effect btn-primary btn-block">
+                                <i class="ti-trash"></i> Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <br>
+{% endblock %}

@@ -22,6 +22,10 @@ Vue.component('featured-one-box', require('./components/FeaturedOneBox.vue'));
 Vue.component('featured-one-boxes', require('./components/FeaturedOneBoxes.vue'));
 Vue.component('featured-two-box', require('./components/FeaturedTwoBox.vue'));
 Vue.component('featured-two-boxes', require('./components/FeaturedTwoBoxes.vue'));
+Vue.component('search-deal', require('./components/SearchDeal.vue'));
+Vue.component('search-deals', require('./components/SearchDeals.vue'));
+Vue.component('business-form', require('./components/BusinessForm.vue'));
+Vue.component('upload-image', require('./components/UploadImage.vue'));
 
 const app = new Vue({
     delimiters: ['{{{', '}}}'],

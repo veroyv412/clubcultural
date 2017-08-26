@@ -23,6 +23,8 @@ Route::get('/deal-get/{deal_id}', 'DealController@getDealBuy');
 
 Route::get('/featured-deals/{weight}', 'DealController@getFeaturedDeals');
 
+Route::get('/c/{category_slug}/{s?}', 'SearchController@getDealsSearchJSON');
+
 //Authentication
 Route::get('/login', 'Auth\LoginController@getLogin')->name('login');
 Route::post('/login', 'Auth\LoginController@postLogin');
@@ -40,6 +42,13 @@ Route::get('/password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm
 Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
 Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
+
+//ADMIN
+Route::get('/admin/manage/business', 'BusinessController@index')->middleware('can:business-manage');
+Route::get('/admin/business/{business}/edit', 'BusinessController@edit')->middleware('can:business-manage');
+Route::post('/admin/business/store', 'BusinessController@store')->middleware('can:business-manage');
+
+Route::get('/admin/manage/deals', 'AdminController@getManageDeals')->middleware('can:deals-manage');
 
 // EMAIL
 Route::get('/email/user_buy_deal', 'HomeController@getEmailUserByDeal');

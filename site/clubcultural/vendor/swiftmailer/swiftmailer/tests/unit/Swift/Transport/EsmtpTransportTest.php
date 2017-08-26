@@ -64,7 +64,7 @@ class Swift_Transport_EsmtpTransportTest extends Swift_Transport_AbstractSmtpEve
          session, use of EHLO indicates that the client is able to process
          service extensions and requests that the server provide a list of the
          extensions it supports.  Older SMTP systems which are unable to
-         support service extensions and contemporary clients which do not
+         support service extensions and contemporary business which do not
          require service extensions in the mail session being initiated, MAY
          use HELO instead of EHLO.  Servers MUST NOT return the extended
          EHLO-style response to a HELO command.  For a particular connection

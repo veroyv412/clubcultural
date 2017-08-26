@@ -164,8 +164,8 @@ class Swift_Signers_SMimeSigner implements Swift_Signers_BodySigner
      * Set perform signing before encryption.
      *
      * The default is to first sign the message and then encrypt.
-     * But some older mail clients, namely Microsoft Outlook 2000 will work when the message first encrypted.
-     * As this goes against the official specs, its recommended to only use 'encryption -> signing' when specifically targeting these 'broken' clients.
+     * But some older mail business, namely Microsoft Outlook 2000 will work when the message first encrypted.
+     * As this goes against the official specs, its recommended to only use 'encryption -> signing' when specifically targeting these 'broken' business.
      *
      * @param bool $signThenEncrypt
      *

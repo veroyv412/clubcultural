@@ -26,12 +26,21 @@ class User extends Authenticatable
      */
     protected $hidden = ['password'];
 
-    public function role()
+    public function roles()
     {
-        return $this->hasOne('Models\Role', 'id', 'role_id');
+        return $this->belongsToMany(\Models\Role::class);
     }
 
     public function sendPasswordResetNotification($token){
         $this->notify(new MailResetPasswordToken($token));
+    }
+
+    public function hasRole($role){
+        if (is_string($role)){
+            return $this->roles->contains('name', $role);
+        }
+
+        //it compares the role with the list of roles
+        return !! $role->intersect($this->roles)->count();
     }
 }

@@ -20,7 +20,7 @@ use Monolog\Logger;
  * API token - HipChat API token
  * Room      - HipChat Room Id or name, where messages are sent
  * Name      - Name used to send the message (from)
- * notify    - Should the message trigger a notification in the clients
+ * notify    - Should the message trigger a notification in the business
  * version   - The API version to use (HipChatHandler::API_V1 | HipChatHandler::API_V2)
  *
  * @author Rafael Dohms <rafael@doh.ms>
@@ -87,7 +87,7 @@ class HipChatHandler extends SocketHandler
      * @param string $token   HipChat API Token
      * @param string $room    The room that should be alerted of the message (Id or Name)
      * @param string $name    Name used in the "from" field.
-     * @param bool   $notify  Trigger a notification in clients or not
+     * @param bool   $notify  Trigger a notification in business or not
      * @param int    $level   The minimum logging level at which this handler will be triggered
      * @param bool   $bubble  Whether the messages that are handled can bubble up the stack or not
      * @param bool   $useSSL  Whether to connect via SSL.
